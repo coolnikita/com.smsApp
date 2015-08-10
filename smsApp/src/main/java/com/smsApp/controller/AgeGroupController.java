@@ -45,7 +45,7 @@ public class AgeGroupController {
 		return "redirect:/ageGroup";
 	}
 	
-	@RequestMapping(value="/removeGroup/{getGroupName}")
+	@RequestMapping(value="/removeGroup/{groupName}")
 	public String deleteAgeGroup(@PathVariable("groupName") String grpName, Model model){
 		model.addAttribute("ageGroup",ageService.getAgeGroup(grpName));
 		model.addAttribute("listGroups", ageService.getAllAgeGroups());
